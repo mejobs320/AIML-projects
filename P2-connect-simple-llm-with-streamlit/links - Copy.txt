@@ -1,0 +1,28 @@
+c:\users\dell\appdata\local\programs\python\python313\lib\site-packages
+C:\Users\dell\AppData\Local\Programs\Python\Python313\python.exe
+
+
+create simple llm without RAG. with gemini with terminal and then with streamlit
+1) # project connect to google ai atudio llm  ((gemini-2.5-flash) and summaries answers   -- model="gemini-2.5-flash"
+2) # It also create web ui using streamlit and answer queries 
+
+1) python main1.py
+You: how many states in india
+Gemini: There are 28 states in India.
+
+2)
+streamlit run main2.py
+You: how many states in india
+Gemini: There are 28 states in India.
+
+ctrl + C to stop
+
+
+API key for AI google studio:  working fine with this api  --------------------------------
+Mail: tradeplus320@gmail.com
+https://aistudio.google.com/api-keys?project=gen-lang-client-0365361683
+Demoapikeygogle
+Project name: projects/115758955319
+Project number: 115758955319
+
+
