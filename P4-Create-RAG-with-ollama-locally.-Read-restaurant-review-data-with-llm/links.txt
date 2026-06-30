@@ -1,0 +1,75 @@
+c:\users\dell\appdata\local\programs\python\python313\lib\site-packages
+C:\Users\dell\AppData\Local\Programs\Python\Python313\python.exe
+
+
+
+
+1)
+Run using ollama locally.  RAG is created in vector.py which already reading restaurant data hard coded
+No need to give key as llm is downloaded locally
+given restaurant review data and llm will answer based on that
+model = OllamaLLM(model="llama3.2")
+
+python main.py
+question
+how many veg restaurant are there
+1
+
+
+
+
+details:
+
+run ollama on packages donwload ollama and below 2 llm'
+ollama pull llama3.2  (LLM)
+ollama pull mxbai-embed-large (embeddings)
+project create restaurant review with using llm from ollama locally. no key required
+download and run.
+add vector database using chroma db in vector.py program
+it create chroma db
+
+It create venv environment and install requirement.txt
+given restaurant review csv data and llm answer using that
+
+
+commands to create virtual env:
+virtual env commands: (environment name is env)
+python -m venv env
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+.\env\Scripts\Activate
+(env) PS C:\Users\dell\OneDrive\Desktop\Python projects\ollama>
+
+pip install -r requirements.txt
+
+
+run programs:
+python main.py
+query database:
+python query_db.py
+
+
+in command prompt:
+ollama pull llama3.2
+ollama pull mxbai-embed-large
+ollama list 
+
+
+
+pip install ollama
+
+Make sure Ollama is running:
+ollama serve
+
+kill ollama:
+askkill /F /IM ollama.exe
+
+
+
+
+
+
+
+
+
+
+
