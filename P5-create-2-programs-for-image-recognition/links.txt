@@ -1,0 +1,66 @@
+c:\users\dell\appdata\local\programs\python\python313\lib\site-packages
+C:\Users\dell\AppData\Local\Programs\Python\Python313\python.exe
+
+
+
+create 2 programs for image recognition.
+
+1)one with ollama locally   -- used moondream via Ollama (download it thru ollama).  ----- image.py program . no streamlit
+python image.py
+:load C:\MY Docs --\projects python\VScode projects\Python projects\Imagerecog\dog.jpg
+done
+2)one with groq llm  (used llm - Llama Vision)  Model:** `llama-3.2-11b-vision`            ----- main.py  with streamlit
+streamlit run main.py  -- ui will open -- share image
+
+
+
+
+
+
+
+
+Details:
+1)
+run ollama on packages donwload ollama and below 2 llm'
+ollama pull moondream (for image)
+
+It create venv environment and install requirement.txt
+
+commands to create virtual env:
+virtual env commands: (environment name is env)
+python -m venv env
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+.\env\Scripts\Activate
+(env) PS C:\Users\dell\OneDrive\Desktop\Python projects\ollama>
+
+run programs:
+python main.py
+
+
+in command prompt:
+ollama list 
+
+
+program1 for running image classifier using ollama ---------------------------------         using claude
+bash# Remove llama3.2-vision
+ollama rm llama3.2-vision
+# Install moondream
+ollama pull moondream
+pip install ollama
+Make sure Ollama is running:
+ollama serve
+
+kill ollama if required:
+askkill /F /IM ollama.exe
+Load image:
+:load C:\Users\dell\OneDrive\Desktop\Python projects\Imagerecog\dog.jpg
+:load C:\MY Docs --\projects python\VScode projects\Python projects\Imagerecog\dog.jpg
+
+2)
+Program2 for image classify using groq:   ---------------------------- https://www.youtube.com/watch?v=XZdY15sHUa8                        and using claude
+streamlit run main.py
+
+
+
+
+
