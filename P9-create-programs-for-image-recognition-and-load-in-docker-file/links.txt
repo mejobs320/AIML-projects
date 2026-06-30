@@ -1,0 +1,119 @@
+c:\users\dell\appdata\local\programs\python\python313\lib\site-packages
+C:\Users\dell\AppData\Local\Programs\Python\Python313\python.exe
+
+youtube video:
+https://www.youtube.com/watch?v=XZdY15sHUa8
+https://github.com/techwithtim/3-Beginner-AI-Projects/blob/main/project3/main.py
+
+create programs for image recognition and load in docker file
+
+
+2)one with groq llm  (used llm - Llama Vision)  Model:** `llama-3.2-11b-vision`            ----- main.py  with streamlit
+streamlit run main.py  -- ui will open -- share image
+
+
+
+
+
+
+
+
+Details:
+1)
+run ollama on packages donwload ollama and below 2 llm'
+ollama pull moondream (for image)
+
+It create venv environment and install requirement.txt
+
+commands to create virtual env:
+virtual env commands: (environment name is env)
+python -m venv env
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+.\env\Scripts\Activate
+(env) PS C:\Users\dell\OneDrive\Desktop\Python projects\ollama>
+
+run programs:
+python main.py
+
+
+**************************************
+
+new commands to create global venv:
+cd C:\Users\dell
+python -m venv global_venv
+C:\Users\dell\global_venv\Scripts\activate
+. C:\Users\dell\global_venv\Scripts\Activate.ps1
+or
+C:\Users\dell\global_venv\Scripts\activate
+
+where python
+pip install langchain langchain-ollama langchain-chroma chromadb tavily-python mcp uvicorn starlette pandas groq google-genai faiss-cpu streamlit python-dotenv ollama
+pip install -r requirements.txt
+
+
+Then navigate to any project and run:
+cd "C:\MY Docs --\projects python\VScode projects\Python projects\P9-Docker"
+streamlit run main.py
+
+
+#####################################
+
+docker file create and run
+
+__To build and run the container:__
+
+docker --version
+
+Open a terminal in the `P9-Docker` folder:
+docker build -t ai-image-classifier .
+
+Run the container:
+docker run -p 8501:8501 ai-image-classifier
+  You can now view your Streamlit app in your browser.
+  Local URL: http://localhost:8501
+
+
+useful commands:
+Run in background (detached mode):
+powershelldocker run -d -p 8501:8501 ai-image-classifier
+See running containers:
+docker ps   (to know contain id)
+Stop a background container:
+docker stop <container_id>
+
+
+
+
+
+
+#################################
+
+
+
+
+in command prompt:
+ollama list 
+
+program1 for running image classifier using ollama ---------------------------------         using claude
+bash# Remove llama3.2-vision
+ollama rm llama3.2-vision
+# Install moondream
+ollama pull moondream
+pip install ollama
+Make sure Ollama is running:
+ollama serve
+
+kill ollama if required:
+askkill /F /IM ollama.exe
+Load image:
+:load C:\Users\dell\OneDrive\Desktop\Python projects\Imagerecog\dog.jpg
+:load C:\MY Docs --\projects python\VScode projects\Python projects\Imagerecog\dog.jpg
+
+2)
+Program2 for image classify using groq:   ---------------------------- https://www.youtube.com/watch?v=XZdY15sHUa8                        and using claude
+streamlit run main.py
+
+
+
+
+
