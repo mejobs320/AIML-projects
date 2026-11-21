@@ -7,7 +7,9 @@ This project gives you a web page where you can upload an image, see what is ins
 
 Project 2: Hybrid RAG Restaurant Review Assistant with Persistent Memory
 This project is a chatbot web app that answers questions about restaurant reviews from a CSV file and also checks the web when helpful, while saving your chat history
+
 **What it does**: You type a question in the Streamlit web page (or click a quick question). The app searches the restaurant review data from realistic_restaurant_reviews.csv (including overall review stats like counts, ratings, and dates) and also pulls live web search results. It combines that information to give an answer, shows where the answer came from, and displays your past questions and answers in the interface.
+
 **How it works behind the scenes**: A vector setup script loads realistic_restaurant_reviews.csv into a persistent ChromaDB index using Sentence-Transformers embeddings (all-MiniLM-L6-v2) so the app can find similar reviews. A separate SQLite database stores every question, answer, source, and timestamp. When you ask a question, LangChain and the Groq model (openai/gpt-oss-120b) use the retrieved reviews and web search results (via DuckDuckGo, with Tavily also noted) to write the response.   
 
 Project 3: Custom MCP Server for Local RAG, SQLite Analytics & Live Web Search
